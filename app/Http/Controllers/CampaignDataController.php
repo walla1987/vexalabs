@@ -14,11 +14,23 @@ class CampaignDataController extends Controller
     {
         $jobs = [];
         foreach ($request->get('user_data') as $userData) {
+
+            $metaData = [];
+
+            if (isset($userData['custom_fields'])) {
+                if(is_string($userData['custom_fields'])) {
+                    $metaData = json_decode($userData['custom_fields'], true);
+                }
+                else {
+                    $metaData = $userData['custom_fields'];
+                }
+            }
+
             $jobs[] = new CaptureCamapignData(
                 $userData['user_id'],
                 $campaign->id,
                 $userData['video_url'],
-                $userData['custom_fields'] ?? []
+                $metaData
             );
         }
         Bus::batch($jobs)->allowFailures()->dispatch();

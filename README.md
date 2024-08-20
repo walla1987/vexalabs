@@ -1,66 +1,76 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+### Setting Up Project Locally 
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A Docker environment was setup to create a uniform environment for developers.
 
-## About Laravel
+- Clone the repository.
+- Copy .env.example to .env within root directory
+- set QUEUE_CONNECTION=database AND DB_HOST=mysql within the newly created .env file
+- Run docker compose up --build -d
+- Access application using http://localhost
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Running migrations
+- docker exec -it <container-name> php artisan migrate
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Queue worker
+- The queue worker is set up with supervisor which happens during the docker-compose process.
+- Ensure QUEUE_CONNECTION within your .env file is set to database.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## API Documentation
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Creates a new campaign.
+#### Request
+`POST /api/campaigns`
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    curl -X POST http://localhost/api/campaigns \
+     -H "Accept: application/json" \
+     -d 'client_id=1&name=Campaign A&start_date=2024-11-06 12:00:00&end_date=2024-11-12 12:00:00'
 
-## Laravel Sponsors
+#### Response
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+    HTTP/1.1 201 Created
+    Date: Mon, 19 Aug 2024 12:36:30 SAST
+    Status: 201 Created
+    Connection: close
+    Content-Type: application/json
+    Location: /api/campaigns
+    Content-Length: 36
 
-### Premium Partners
+```json
+{"data": {
+    "id":1,
+    "client_id":1,
+    "name": "Campaign A",
+    "start_date": "2024-11-06 12:00:00",
+    "end_date": "2024-11-12 12:00:00",
+    "created_at": "2024-08-20T14:06:49.000000Z",
+    "updated_at": "2024-08-20T14:06:49.000000Z"
+  }
+}
+```
+### Adds user data to a campaign.
+#### Request
+`POST /api/campaigns/{campaign_id}/data`
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+    curl -X POST http://localhost/api/campaigns/1/data \
+     -H "Accept: application/json" \
+     -d 'user_data[0][user_id]=1' \
+     -d 'user_data[0][video_url]=http://video-url' \
+    -d 'user_data[0][custom_fields]={"foo":"bar"}'
+### Response
+    HTTP/1.1 202 Accepted
+    Server: nginx/1.26.1
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    X-Powered-By: PHP/8.3.10
+    Cache-Control: no-cache, private
+    Date: Tue, 20 Aug 2024 15:06:21 GMT
+    X-RateLimit-Limit: 60
+    X-RateLimit-Remaining: 58
+    Access-Control-Allow-Origin: *
+```json
+[]
+```
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

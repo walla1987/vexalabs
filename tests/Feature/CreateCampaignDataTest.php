@@ -33,7 +33,8 @@ class CreateCampaignDataTest extends TestCase
             ],
             [
                 'user_id' => $users->last()->id,
-                'video_url' => $this->faker->url
+                'video_url' => $this->faker->url,
+                'custom_fields' => "{\"foo\": \"bar\"}"
             ],
         ];
 

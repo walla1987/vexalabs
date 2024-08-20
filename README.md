@@ -11,6 +11,11 @@ A Docker environment was setup to create a uniform environment for developers.
 ### Running migrations
 - docker exec -it <container-name> php artisan migrate
 
+### Install application dependencies
+- docker exec -it <container-name> composer install 
+
+### Generating application key 
+- docker exec -it <container-name> php artisan key:generate
 
 ### Queue worker
 - The queue worker is set up with supervisor which happens during the docker-compose process.

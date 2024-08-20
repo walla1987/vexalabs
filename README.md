@@ -74,3 +74,9 @@ A Docker environment was setup to create a uniform environment for developers.
 []
 ```
 
+### Test cases 
+* **Code Robustness**: Tests help in identifying bugs and issues, ensuring that the code handles various scenarios and edge cases gracefully.
+* **Confidence**: Tests provide assurance that changes or new features do not break existing functionality, giving developers and stakeholders confidence in the application's stability.
+
+To run the test cases, run the following commmand within the app container.
+`./vendor/bin/phpunit `

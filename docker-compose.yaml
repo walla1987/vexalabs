@@ -1,0 +1,32 @@
+services:
+  app:
+    build:
+      dockerfile: docker/app.dockerfile
+    volumes:
+      - '.:/app'
+    ports:
+      - 9000:9000
+  nginx:
+    build:
+      dockerfile: docker/nginx.dockerfile
+    volumes:
+      - '.:/app'
+      - './docker/nginx/nginx.conf:/etc/nginx/nginx.conf'
+    ports:
+      - 80:80
+    depends_on:
+      - app
+  mysql:
+    image: mysql
+    ports:
+      - '${DB_PORT:-3306}:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_DATABASE: '${DB_DATABASE}'
+      MYSQL_USER: '${DB_USERNAME}'
+      MYSQL_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    volumes:
+      - './docker/mysql:/var/lib/mysql'
+

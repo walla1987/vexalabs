@@ -1,0 +1,116 @@
+2024-08-20 12:07:36,618 INFO supervisord started with pid 1
+2024-08-20 12:07:37,627 INFO spawned: 'laravel-worker_00' with pid 7
+2024-08-20 12:07:37,637 INFO spawned: 'laravel-worker_01' with pid 8
+2024-08-20 12:07:38,666 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:07:38,687 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:07:44,725 INFO exited: laravel-worker_00 (exit status 0; expected)
+2024-08-20 12:07:44,728 INFO exited: laravel-worker_01 (exit status 0; expected)
+2024-08-20 12:07:45,742 INFO spawned: 'laravel-worker_00' with pid 15
+2024-08-20 12:07:45,747 INFO spawned: 'laravel-worker_01' with pid 16
+2024-08-20 12:07:46,754 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:07:46,767 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:11:10,675 WARN received SIGQUIT indicating exit request
+2024-08-20 12:11:10,683 INFO waiting for laravel-worker_00, laravel-worker_01 to die
+2024-08-20 12:11:10,891 WARN stopped: laravel-worker_00 (terminated by SIGTERM)
+2024-08-20 12:11:10,892 WARN stopped: laravel-worker_01 (terminated by SIGTERM)
+2024-08-20 12:11:59,435 INFO supervisord started with pid 1
+2024-08-20 12:12:00,449 INFO spawned: 'laravel-worker_00' with pid 6
+2024-08-20 12:12:00,453 INFO spawned: 'laravel-worker_01' with pid 7
+2024-08-20 12:12:01,469 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:12:01,495 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:12:06,739 INFO exited: laravel-worker_01 (exit status 0; expected)
+2024-08-20 12:12:06,793 INFO spawned: 'laravel-worker_01' with pid 14
+2024-08-20 12:12:06,794 INFO exited: laravel-worker_00 (exit status 0; expected)
+2024-08-20 12:12:07,799 INFO spawned: 'laravel-worker_00' with pid 18
+2024-08-20 12:12:07,801 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:12:08,803 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:13:13,094 WARN received SIGQUIT indicating exit request
+2024-08-20 12:13:13,101 INFO waiting for laravel-worker_00, laravel-worker_01 to die
+2024-08-20 12:13:13,230 WARN stopped: laravel-worker_00 (terminated by SIGTERM)
+2024-08-20 12:13:14,273 WARN stopped: laravel-worker_01 (terminated by SIGTERM)
+2024-08-20 12:14:56,077 INFO supervisord started with pid 1
+2024-08-20 12:14:57,088 INFO spawned: 'laravel-worker_00' with pid 7
+2024-08-20 12:14:57,098 INFO spawned: 'laravel-worker_01' with pid 8
+2024-08-20 12:14:58,117 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:14:58,144 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:15:03,719 INFO exited: laravel-worker_00 (exit status 0; expected)
+2024-08-20 12:15:03,720 INFO exited: laravel-worker_01 (exit status 0; expected)
+2024-08-20 12:15:03,736 INFO spawned: 'laravel-worker_00' with pid 15
+2024-08-20 12:15:03,739 INFO spawned: 'laravel-worker_01' with pid 16
+2024-08-20 12:15:04,742 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:15:04,743 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:15:31,832 WARN received SIGQUIT indicating exit request
+2024-08-20 12:15:31,844 INFO waiting for laravel-worker_00, laravel-worker_01 to die
+2024-08-20 12:15:31,962 WARN stopped: laravel-worker_00 (terminated by SIGTERM)
+2024-08-20 12:15:31,963 WARN stopped: laravel-worker_01 (terminated by SIGTERM)
+2024-08-20 12:17:53,439 INFO supervisord started with pid 1
+2024-08-20 12:17:54,453 INFO spawned: 'laravel-worker_00' with pid 7
+2024-08-20 12:17:54,470 INFO spawned: 'laravel-worker_01' with pid 8
+2024-08-20 12:17:55,473 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:17:55,473 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:18:00,937 INFO exited: laravel-worker_00 (exit status 0; expected)
+2024-08-20 12:18:00,939 INFO exited: laravel-worker_01 (exit status 0; expected)
+2024-08-20 12:18:00,945 INFO spawned: 'laravel-worker_00' with pid 15
+2024-08-20 12:18:00,950 INFO spawned: 'laravel-worker_01' with pid 16
+2024-08-20 12:18:01,955 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:18:01,958 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:24:40,476 WARN received SIGQUIT indicating exit request
+2024-08-20 12:24:40,497 INFO waiting for laravel-worker_00, laravel-worker_01 to die
+2024-08-20 12:24:40,842 WARN stopped: laravel-worker_00 (terminated by SIGTERM)
+2024-08-20 12:24:40,846 WARN stopped: laravel-worker_01 (terminated by SIGTERM)
+2024-08-20 12:29:33,608 INFO supervisord started with pid 1
+2024-08-20 12:29:34,628 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-20 12:29:34,631 INFO spawned: 'laravel-worker_00' with pid 7
+2024-08-20 12:29:34,633 INFO spawned: 'laravel-worker_01' with pid 8
+2024-08-20 12:29:35,639 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-20 12:29:35,639 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:29:35,645 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:29:37,667 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-20 12:29:40,682 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-20 12:29:40,684 INFO gave up: php-fpm entered FATAL state, too many start retries too quickly
+2024-08-20 12:29:40,827 INFO exited: laravel-worker_00 (exit status 0; expected)
+2024-08-20 12:29:40,828 INFO exited: laravel-worker_01 (exit status 0; expected)
+2024-08-20 12:29:41,849 INFO spawned: 'laravel-worker_00' with pid 15
+2024-08-20 12:29:41,859 INFO spawned: 'laravel-worker_01' with pid 16
+2024-08-20 12:29:42,875 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:29:42,878 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:32:15,383 WARN received SIGQUIT indicating exit request
+2024-08-20 12:32:15,392 INFO waiting for laravel-worker_00, laravel-worker_01 to die
+2024-08-20 12:32:15,593 WARN stopped: laravel-worker_01 (terminated by SIGTERM)
+2024-08-20 12:32:15,594 WARN stopped: laravel-worker_00 (terminated by SIGTERM)
+2024-08-20 12:33:08,306 INFO supervisord started with pid 1
+2024-08-20 12:33:09,315 INFO spawned: 'php-fpm' with pid 7
+2024-08-20 12:33:09,322 INFO spawned: 'laravel-worker_00' with pid 8
+2024-08-20 12:33:09,330 INFO spawned: 'laravel-worker_01' with pid 9
+2024-08-20 12:33:10,407 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:33:10,426 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:33:10,431 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:33:14,335 INFO exited: laravel-worker_00 (exit status 0; expected)
+2024-08-20 12:33:14,337 INFO exited: laravel-worker_01 (exit status 0; expected)
+2024-08-20 12:33:14,342 INFO spawned: 'laravel-worker_00' with pid 18
+2024-08-20 12:33:14,349 INFO spawned: 'laravel-worker_01' with pid 19
+2024-08-20 12:33:15,358 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:33:15,358 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:39:34,584 WARN received SIGQUIT indicating exit request
+2024-08-20 12:39:34,599 INFO waiting for php-fpm, laravel-worker_00, laravel-worker_01 to die
+2024-08-20 12:39:35,030 WARN stopped: laravel-worker_01 (terminated by SIGTERM)
+2024-08-20 12:39:35,031 WARN stopped: laravel-worker_00 (terminated by SIGTERM)
+2024-08-20 12:39:35,193 INFO stopped: php-fpm (exit status 0)
+2024-08-20 12:40:25,897 INFO supervisord started with pid 1
+2024-08-20 12:40:26,913 INFO spawned: 'laravel-worker_00' with pid 8
+2024-08-20 12:40:26,932 INFO spawned: 'laravel-worker_01' with pid 9
+2024-08-20 12:40:26,950 INFO spawned: 'php-fpm' with pid 10
+2024-08-20 12:40:28,050 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:40:28,051 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:40:28,051 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:40:32,041 INFO exited: laravel-worker_00 (exit status 0; expected)
+2024-08-20 12:40:32,043 INFO exited: laravel-worker_01 (exit status 0; expected)
+2024-08-20 12:40:32,061 INFO spawned: 'laravel-worker_00' with pid 19
+2024-08-20 12:40:32,065 INFO spawned: 'laravel-worker_01' with pid 20
+2024-08-20 12:40:33,075 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:40:33,090 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-08-20 12:44:39,219 WARN received SIGQUIT indicating exit request
+2024-08-20 12:44:39,228 INFO waiting for laravel-worker_00, laravel-worker_01, php-fpm to die
+2024-08-20 12:44:40,389 INFO stopped: php-fpm (exit status 0)
+2024-08-20 12:44:40,570 WARN stopped: laravel-worker_01 (terminated by SIGTERM)
+2024-08-20 12:44:40,572 WARN stopped: laravel-worker_00 (terminated by SIGTERM)
